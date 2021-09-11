@@ -6,6 +6,10 @@
 
 echo "Setup starting 💻"
 
+# Install Rosetta 
+sudo softwareupdate --install-rosetta --agree-to-license
+
+# Install Brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Adding brew to zprofile file
