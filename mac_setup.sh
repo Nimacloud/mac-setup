@@ -29,6 +29,7 @@ PACKAGES=(
     mas
     watchman
     hub
+    dockutil
 )
 
 echo "Installing packages..."
@@ -88,7 +89,6 @@ echo "Installing dev tools..."
 brew install --cask ${DEV_TOOLS[@]}
 
 RANDOM_APPS=(
-    dockutil
     spotify
     appcleaner
     caffeine
