@@ -37,9 +37,11 @@ brew install ${PACKAGES[@]}
 
 # 497799835  - Xcode
 # 1475897096 - Jira
+# 461504587 - Trello
 APPSTOREAPPS=(
     497799835
     1475897096
+    461504587
 )
 
 mas install ${APPSTOREAPPS[@]}
