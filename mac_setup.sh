@@ -7,7 +7,12 @@
 echo "Setup starting 💻"
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ./.zprofile
+
+# Adding brew to zprofile file
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+
+# Adding brew to shell environment
+eval "$(/opt/homebrew/bin/brew shellenv)" 
 
 
 PACKAGES=(
