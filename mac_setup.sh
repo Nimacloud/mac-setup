@@ -6,8 +6,17 @@
 
 echo "Setup starting 💻"
 
+# Install Rosetta 
+sudo softwareupdate --install-rosetta --agree-to-license
+
+# Install Brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ./.zprofile
+
+# Adding brew to zprofile file
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+
+# Adding brew to shell environment
+eval "$(/opt/homebrew/bin/brew shellenv)" 
 
 
 PACKAGES=(
@@ -20,6 +29,7 @@ PACKAGES=(
     mas
     watchman
     hub
+    dockutil
 )
 
 echo "Installing packages..."
@@ -28,9 +38,11 @@ brew install ${PACKAGES[@]}
 
 # 497799835  - Xcode
 # 1475897096 - Jira
+# 461504587 - Trello
 APPSTOREAPPS=(
     497799835
     1475897096
+    461504587
 )
 
 mas install ${APPSTOREAPPS[@]}
